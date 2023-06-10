@@ -99,6 +99,9 @@ h1, h2, h3 {
 	font-family: outfit_f;
 	color: var(--h-color);
 }
+.content,.hero-section, .main-header, .gallery > * {
+	will-change: transform;
+}
 											/*# Header section */
 .main-header{
 	height: 100vh;
