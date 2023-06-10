@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 	--index: calc(1vw + 1vh);
 	--h-color: #f4efec;
 	--t-color: #cdc6c3;
+	--galery-gap: calc(var(--index) * 10);
 }
 @font-face {
 	font-family: raleway_f;
@@ -107,6 +108,7 @@ h1, h2, h3 {
 	width: calc(var(--index) * 36);
 	left: 36vw;
 	top: 8vh;
+	z-index: -1;
 }
 .container{
 	padding: 0 6vw;
@@ -118,4 +120,40 @@ h1, h2, h3 {
 	width: min-content;
 	bottom: 12vh;
 	line-height: 0.9;
+}
+.gallery{
+	display: flex;
+	padding:calc(var(--index) * 8) 0 ;
+}
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.gallery__item{
+	max-width: calc(var(--index) * 22) ;
+	margin-bottom: var(--galery-gap);
+	max-height: 180vh;
+	border-radius: 8px;
+}
+.gallery__left {
+	margin-top: calc(var(--galery-gap) * 1.6);
+}
+.galery__right{
+	margin-bottom: 0;
+	margin-top: var(--galery-gap);
+}
+.text-block{
+	position: relative;
+}
+.text-block__h{
+	font-size: 3rem;
+	line-height: 3.6rem;
+	margin-bottom: 1.6rem;
+}
+.text-block__p{
+	font-size: 1.6rem;
+	line-height: 2.2rem;
 }
