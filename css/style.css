@@ -27,7 +27,7 @@ html, body {
 	width: 100%;
 	font-size: 100%;
 	line-height: 1;
-	font-size: 8px;
+	font-size: 10px;
 	-webkit-text-size-adjust: 100%;
 		-moz-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
@@ -74,6 +74,8 @@ h1, h2, h3, h4, h5, h6 {
 				                     /*# Variable and fonth */
 :root {
 	--index: calc(1vw + 1vh);
+	--h-color: #f4efec;
+	--t-color: #cdc6c3;
 }
 @font-face {
 	font-family: raleway_f;
@@ -83,6 +85,37 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
 	font-family: outfit_f;
 	src: url(../fonts/outfit-regular.woff2);
-	font-weight: 400;
+}
+body{
+	background-color: #1f1d1e;
+	background-image: url(../img/bg.jpg);
+	background-size: 50px;
+	color: var(--t-color);
+	font-family: raleway-f;
+	overflow-x: hidden;
+}
+h1, h2, h3 {
+	font-family: outfit_f;
+	color: var(--h-color);
 }
 											/*# Header section */
+.main-header{
+	height: 100vh;
+}
+.hero-img{
+	position: absolute;
+	width: calc(var(--index) * 36);
+	left: 36vw;
+	top: 8vh;
+}
+.container{
+	padding: 0 6vw;
+}
+
+.site-title{
+	position: absolute;
+	font-size:calc(var(--index) * 8) ;
+	width: min-content;
+	bottom: 12vh;
+	line-height: 0.9;
+}
